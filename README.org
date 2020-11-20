@@ -1,0 +1,6 @@
+This repository will contain the text, images, and links for the
+"Emacs News Highlights" presentation at EmacsConf 2020. I'll update it
+on November 28, 2020, when the conference starts.
+
+- [[https://emacsconf.org/2020/schedule/01][Check out the talk page for Emacs News Highlights]]
+- [[http://emacsconf.org/2020][Learn more about how to watch or participate in EmacsConf 2020]] (Nov 28-29, 2020)
