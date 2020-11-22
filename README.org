@@ -1,6 +1,287 @@
-This repository will contain the text, images, and links for the
-"Emacs News Highlights" presentation at EmacsConf 2020. I'll update it
-on November 28, 2020, when the conference starts.
+#+TITLE: Emacs News Highlights
 
-- [[https://emacsconf.org/2020/schedule/01][Check out the talk page for Emacs News Highlights]]
-- [[http://emacsconf.org/2020][Learn more about how to watch or participate in EmacsConf 2020]] (Nov 28-29, 2020)
+* Emacs News Highlights
+
+| Talk page            | https://emacsconf.org/2020/schedule/01                     |
+| Contact              | Sacha Chua [[mailto:sacha@sachachua.com][sacha@sachachua.com]]                             |
+| Video with subtitles | [[file:emacs-conf-2020-emacs-news-highlights-sacha-chua.webm]] |
+| Audio only           | [[file:audio.ogg]]                                             |
+
+** Talk
+*** Intro   
+
+ | 0:00:00 | [[file:images/title.png]]                               |
+ | 0:00:00 | I'm Sacha Chua, and welcome to EmacsConf 2020.      |
+ | 0:00:04 | To kick things off, here are ten cool things        |
+ | 0:00:07 | that people have been working on                    |
+ | 0:00:08 | since the conference last year.                     |
+ | 0:00:10 | If you want to follow the links                     |
+ | 0:00:11 | or if you'd like to add something I've missed,      |
+ | 0:00:14 | add them to the collaborative pad                   |
+ | 0:00:16 | if you're watching this live                        |
+ | 0:00:17 | or check out the EmacsConf wiki page for this talk. |
+ | 0:00:19 | [[file:images/1.png]]                                   |
+
+*** 1. Emacs 27.1
+
+ | 0:00:20 | [[file:images/emacs27-1.png]] |
+ | 0:00:20 | The big news this year was the release of Emacs 27.1, |
+ | 0:00:24 | a little over two years after Emacs 26. |
+ | 0:00:27 | [[file:images/release-notes.png]] |
+ | 0:00:27 | [[https://www.masteringemacs.org/article/whats-new-in-emacs-27-1][Mickey Petersen's notes]] on the release are a great way |
+ | 0:00:31 | to find out what's new,     |
+ | 0:00:32 | [[file:images/emacs-dev-update.png]] |
+ | 0:00:32 | and John Wiegley's development update tomorrow |
+ | 0:00:34 | will probably give more details. |
+
+*** 2. Performance
+ | 0:00:35 | [[file:images/2.png]]                                              |
+ | 0:00:36 | [[file:images/gcc-emacs.png]]                                      |
+ | 0:00:36 | What's coming up for Emacs 28 and beyond?                      |
+ | 0:00:39 | One of the branches that people are                            |
+ | 0:00:40 | excited about is [[https://www.emacswiki.org/emacs/GccEmacs][gccemacs]], which compiles                      |
+ | 0:00:44 | Emacs Lisp to native code so that it runs faster.              |
+ | 0:00:48 | [[file:images/gcc-video.png]]                                      |
+ | 0:00:48 | To learn more, check out the [[https://www.reddit.com/r/emacs/comments/g9vdd0/bringing_gnu_emacs_to_native_code_at_the_european/][Bringing GNU Emacs to Native Code]] |
+ | 0:00:50 | presentation from the European Lisp Symposium.                 |
+
+*** 3. Modernization: behaviour and appearance
+ | 0:00:54 | [[file:images/3.png]]                                          |
+ | 0:00:55 | [[file:images/modernization.png]]                              |
+ | 0:00:55 | There was a huge conversation about                        |
+ | 0:00:56 | modernizing Emacs on emacs-devel and other places.         |
+ | 0:00:59 | [[file:images/lwn.png]]                                        |
+ | 0:00:59 | [[https://lwn.net/Articles/819452/][Linux Weekly News]] has a good summary.                      |
+ | 0:01:02 | [[file:images/variable-width.png]]                             |
+ | 0:01:02 | One of the interesting sub-threads on emacs-devel          |
+ | 0:01:04 | was about [[https://lists.gnu.org/archive/html/emacs-devel/2020-10/msg00616.html][using more variable-width fonts]],                 |
+ | 0:01:06 | which would probably go a long way to                      |
+ | 0:01:08 | making Emacs look pretty fancy once people                 |
+ | 0:01:11 | sort out the alignment issues.                             |
+ | 0:01:13 | It looks like core Emacs will probably                     |
+ | 0:01:15 | change slowly in terms of functionality and documentation, |
+ | 0:01:18 | file:images/elegant-emacs.png                              |
+ |         | https://github.com/rougier/elegant-emacs                   |
+ | 0:01:18 | but starter kits and configuration give people             |
+ | 0:01:21 | a great way to experiment.                                 |
+
+*** 4. Doom Emacs
+ | 0:01:21 | [[file:images/4.png]]                             |
+ | 0:01:22 | [[file:images/doom-emacs.png]]                    |
+ | 0:01:22 | Speaking of starter kits,                     |
+ | 0:01:24 | Doom Emacs seems to be growing in popularity. |
+ | 0:01:27 | [[file:images/doomcasts.png]]                     |
+ | 0:01:27 | It got a big boost thanks to [[https://www.youtube.com/playlist?list=PLhXZp00uXBk4np17N39WvB80zgxlZfVwj][DoomCasts]] and    |
+ | 0:01:28 | [[file:images/distrotube.png]]                    |
+ | 0:01:28 | [[https://www.youtube.com/watch?v=dr_iBj91eeI][DistroTube]] videos. So if you're curious,      |
+ | 0:01:32 | go ahead and check those out.                 |
+
+*** 5. Other videos
+ | 0:01:34 | [[file:images/5.png]]                                         |
+ | 0:01:35 | [[file:images/videos.png]]                                    |
+ | 0:01:35 | And for general Emacs topics,                             |
+ | 0:01:37 | there have been a ton of other great videos               |
+ | 0:01:38 | from [[https://www.youtube.com/channel/UC0uTPqBCFIpZxlz_Lv1tk_g][Protesilaos Stavrou]], [[https://www.youtube.com/user/mzamansky][Mike Zamansky]], [[https://www.youtube.com/channel/UCAiiOTio8Yu69c3XnR7nQBQ][System Crafters]], |
+ | 0:01:42 | and other folks. Good stuff.                              |
+
+*** 6. Org Mode
+ | 0:01:44 | [[file:images/6.png]]                                                                               |
+ | 0:01:45 | [[file:images/org-mode.png]]                                                                        |
+ | 0:01:45 | Org continues to be a big reason                                                                |
+ | 0:01:46 | for people to get into Emacs.                                                                   |
+ | 0:01:48 | This year, Zettelkasten-based workflows                                                         |
+ | 0:01:50 | became popular as people played around                                                          |
+ | 0:01:52 | with organizing ideas into small chunks                                                         |
+ | 0:01:55 | that are linked to each other.                                                                  |
+ | 0:01:57 | [[file:images/org-roam.png]]                                                                        |
+ | 0:01:57 | org-roam is one of the packages for doing that                                                  |
+ | 0:01:59 | and there are three presentations about it this year.                                           |
+ | 0:02:02 | [[file:images/zettelkasten-discussion.png]]                                                         |
+ | 0:02:02 | There are also non-Org ways to do it,                                                           |
+ | 0:02:04 | such as zetteldeft, neuron-mode, and more.                                                      |
+ | 0:02:07 | [[file:images/org-appearance-agenda.png]]                                                           |
+ |         | https://www.reddit.com/r/emacs/comments/hnf3cw/my_orgmode_agenda_much_better_now_with_category/ |
+ | 0:02:07 | People have been experimenting                                                                  |
+ | 0:02:08 | with Org's appearance.                                                                          |
+ | 0:02:09 | [[file:images/org-appearance-wysiwyg.png]]                                                          |
+ | 0:02:09 | Check these screenshots out for some ideas.                                                     |
+ |         | https://www.reddit.com/r/emacs/comments/iemo44/wysiwygified_org_mode/                           |
+
+*** 7. Coding: LSP-mode
+ | 0:02:11 | [[file:images/7.png]]                                              |
+ | 0:02:12 | [[file:images/json.png]]                                           |
+ | 0:02:12 | Coding: Faster JSON processing                                 |
+ | 0:02:14 | is going to make working with                                  |
+ | 0:02:15 | code analysis tools better.                                    |
+ | 0:02:17 | [[file:images/lsp.png]]                                            |
+ | 0:02:17 | [[https://www.reddit.com/r/emacs/comments/hjj16g/announcement_lspmode_70_released/][LSP-mode released version 7 and gained more contributors]], too, |
+ | 0:02:21 | so there are probably exciting times ahead                     |
+ | 0:02:23 | for making Emacs even more of an                               |
+ | 0:02:24 | integrated development environment.                            |
+
+*** 8. EAF
+ | 0:02:25 | [[file:images/8.png]]                                |
+ | 0:02:26 | [[file:images/eaf.png]]                              |
+ | 0:02:26 | EAF: The Emacs Application Framework    |
+ | 0:02:30 | has some pretty interesting demos of             |
+ | 0:02:32 | [[https://github.com/manateelazycat/emacs-application-framework][embedded Qt programs]] in Emacs on Linux.          |
+ | 0:02:34 | [[file:images/eaf-talk.png]]                         |
+ | 0:02:34 | Matthew Zeng will give a presentation            |
+ | 0:02:37 | on its architecture and walk through some demos, |
+ | 0:02:39 | so check that one out too if you want. |
+
+*** 9. Virtual meetups
+ | 0:02:41 | [[file:images/9.png]]                                  |
+ | 0:02:41 | The big real-world change this year                |
+ | 0:02:43 | was COVID-19, of course. It sucks. A lot.          |
+ | 0:02:47 | One good thing that's come out of it               |
+ | 0:02:49 | is that many Emacs meetups have moved online,      |
+ | 0:02:52 | so it's easier to connect with people              |
+ | 0:02:54 | no matter where you are in the world.              |
+ | 0:02:56 | [[file:images/meetup-atx.png]]                         |
+ | 0:02:56 | There's one hosted by [[https://www.meetup.com/EmacsATX/][EmacsATX]] on December 2       |
+ | 0:03:01 | and it's about re-builder, leaf, and feather.      |
+ | 0:03:03 | [[file:images/meetup-nyc.png]]                         |
+ | 0:03:03 | [[https://www.meetup.com/New-York-Emacs-Meetup/][EmacsNYC]]'s next meetup is on December 7            |
+ | 0:03:06 | and it's about literate programming with Org Mode. |
+ | 0:03:08 | [[file:images/meetup-berlin.png]]                      |
+ | 0:03:08 | The [[https://emacs-berlin.org/][Berlin]] remote meetup was                       |
+ | 0:03:10 | just a few days ago on November 25,                |
+ | 0:03:12 | and [[https://www.meetup.com/Emacs-SF/][EmacsSF]] and [[https://identi.ca/shakthimaan][Asia-Pacific]]                       |
+ | 0:03:15 | probably have some coming up, too.                 |
+ | 0:03:17 | [[file:images/meetups.png]]                            |
+ | 0:03:17 | People generally announce the meetups              |
+ | 0:03:18 | on [[https://reddit.com/r/emacs][reddit.com/r/emacs]], so you can              |
+ | 0:03:21 | look there for updates.                            |
+ | 0:03:23 | If you organize one of these,                      |
+ | 0:03:24 | please let me know so that                         |
+ | 0:03:25 | I can include it in [[https://sachachua.com/blog/category/emacs-news/][Emacs News]].              |
+
+*** 10. Survey
+    
+ | 0:03:26 | [[file:images/10.png]]                                           |
+ | 0:03:27 | [[file:images/survey.png]]                                       |
+ | 0:03:28 | Lastly, there's an unofficial survey of the Emacs community. |
+ | 0:03:31 | It closes on November 30,                                    |
+ | 0:03:33 | so if you'd like to participate,                             |
+ | 0:03:34 | you can fill out the form at [[https://emacssurvey.org][emacssurvey.org]]                 |
+ | 0:03:37 | or send it in via e-mail.                                    |
+ | 0:03:39 | [[file:images/summary.png]]                                      |
+ | 0:03:39 | So those were 10 quick highlights from this year.            |
+ | 0:03:42 | If you're curious, check out the EmacsConf 2020 wiki page    |
+ | 0:03:46 | for this talk so that you can follow the links.              |
+ | 0:03:47 | [[file:images/emacs-news.png]]                                   |
+ | 0:03:47 | If you'd like to get updates every week,                     |
+ | 0:03:49 | you can check out the [[https://sachachua.com/blog/category/emacs-news/][Emacs News]] I put together.       |
+ | 0:03:52 | Feel free to send me cool stuff to include.                  |
+ | 0:03:55 | [[file:images/emacsconf.png]]                                    |
+ | 0:03:55 | Now on to the rest of EmacsConf!                             |
+ | 0:03:57 | Have fun, and thanks for joining us!                         |
+ | 0:03:59 | [[file:images/emacsconf.png]]                                    |
+ | 0:03:49 | Have fun, and thanks for joining us!                         |
+
+** Code
+*** Generate subtitles
+
+ #+begin_src emacs-lisp :results silent :exports code
+       (defun my/emms-insert-timestamp ()
+         (interactive)
+         (when (looking-at "[0-9]:[0-9][0-9]:[0-9][0-9] ")
+           (replace-match ""))
+         (insert
+          (format "%d:%02d:%02d "
+                  (/ emms-playing-time 3600)
+                  (% (/ emms-playing-time 60) 60)
+                  (% emms-playing-time 60)))
+         (forward-line)
+         (beginning-of-line)
+         (skip-chars-forward "| "))
+     ;; (progn (require 'emms-setup) (emms-all) (emms-default-players))
+     ;; (global-set-key (kbd "<f5>") 'my/emms-insert-timestamp)
+     ;; (global-set-key (kbd "<f6>") 'emms-pause)
+       (defun my/get-timestamp-lines ()
+         (save-excursion
+           (goto-char (point-min))
+           (let (temp result)
+             (while (re-search-forward "^ *|? *\\(\\([0-9]\\):\\([0-9][0-9]\\):\\([0-9][0-9]\\)\\) *|? *\\(.*?\\) *|?$" nil t)
+               (setq temp (cons (list :time
+                                      (+
+                                       (* 60 60 (string-to-number (match-string 2)))
+                                       (* 60 (string-to-number (match-string 3)))
+                                       (string-to-number (match-string 4)))
+                                      :start-ts (match-string 1)
+                                      :raw (match-string 5)
+                                      :text (replace-regexp-in-string
+                                             "\\[\\|\\]\\| (<.*?>)" ""
+                                             (save-match-data (org-export-string-as (save-match-data (match-string 5)) 'ascii t))))
+                                temp)))
+             (reverse temp))))
+     (defun my/calculate-duration-and-end-ts (temp)
+       (loop for i below (1- (length temp)) do
+             (plist-put (elt temp i) :end-ts (plist-get (elt temp (1+ i)) :start-ts))
+             (plist-put (elt temp i) :duration (- (plist-get (elt temp (1+ i)) :time) (plist-get (elt temp i) :time))))
+       temp)
+
+       (defun my/generate-subtitles (lines)
+         (interactive (list (my/get-timestamp-lines)))
+         (save-excursion
+           (goto-char (point-min))
+           (let ((temp
+                  (my/calculate-duration-and-end-ts
+                   (seq-remove (lambda (o) (string-match "file:" (plist-get o :raw)))
+                               lines))))
+             (with-current-buffer (find-file "subtitles.srt")
+               (erase-buffer)
+               (insert
+                (s-join ""
+                        (loop for i below (1- (length temp)) collect
+                              (format "%d\n%s,000 --> %s,000\n%s\n\n"
+                                      (1+ i)
+                                      (plist-get (elt temp i) :start-ts)
+                                      (plist-get (elt temp i) :end-ts)
+                                      (plist-get (elt temp i) :text)))))
+               (save-buffer)))))
+   (my/generate-subtitles (my/get-timestamp-lines))
+ #+end_src
+
+ #+RESULTS:
+ [[file:subtitles.srt]]
+
+*** Generate the presentation using the timestamps and linked images
+
+ #+begin_src emacs-lisp :results silent :exports code :var run="copy" :var audio="audio.ogg"
+   (defun my/include-subtitles ()
+     (interactive)
+     "ffmpeg -y -i with-audio.webm -i subtitles.srt -c:v copy -c:a copy emacs-conf-2020-emacs-news-highlights-sacha-chua.webm")
+
+   (defun my/generate-video (lines audio)
+     (interactive (list (my/get-timestamp-lines) "run"))
+     (let ((result (my/calculate-duration-and-end-ts
+                    (seq-filter (lambda (o) (string-match "file:" (plist-get o :raw)))
+                                lines)))
+           output)
+       ;;      (setq result (seq-take result 5))
+       (setq output (format "ffmpeg -y %s -i %s -filter_complex \"%s;%sconcat=n=%d:v=1[v]\" -map '[v]' -map %d:a -shortest -vsync 1 -c:a copy -c:v vp8 with-audio.webm"
+                            (mapconcat (lambda (o)
+                                         (if (string-match "file:\\([^]]+*\\)" (plist-get o :raw))
+                                             (format "-loop 1 -t %d -framerate 5 -i '%s'"
+                                                     (or (plist-get o :duration) 0)
+                                                     (match-string 1 (plist-get o :raw))))) result " \\\n")
+                            audio
+                            (s-join ";"
+                                    (loop for i below (1- (length result)) collect
+                                          (format "[%d:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r%d]" i i)))
+                            (s-join ""
+                                    (loop for i below (1- (length result)) collect 
+                                          (format "[r%d]" i)))
+                            (1- (length result))
+                            (length result)))
+       output))
+   (let ((lines (my/get-timestamp-lines)))
+     ;(my/generate-subtitles lines)
+     (funcall
+        (cdr (assoc run '(("copy" . kill-new) ("show" . identity) ("run" . shell-command))))
+        (concat (my/generate-video lines audio)
+                ";" (my/include-subtitles))))
+ #+end_src
+
