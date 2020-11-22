@@ -247,7 +247,7 @@
 
 ** Generate the presentation using the timestamps and linked images
 
-#+begin_src emacs-lisp :results silent :exports code :var run="copy" :var audio="audio.ogg"
+#+begin_src emacs-lisp :results value :wrap "src sh" :exports code :var run="copy" :var audio="audio.ogg"
   (defun my/include-subtitles ()
     (interactive)
     "ffmpeg -y -i with-audio.webm -i subtitles.srt -c:v copy -c:a copy emacs-conf-2020-emacs-news-highlights-sacha-chua.webm")
@@ -281,5 +281,51 @@
        (cdr (assoc run '(("copy" . kill-new) ("show" . identity) ("run" . shell-command))))
        (concat (my/generate-video lines audio)
                ";" (my/include-subtitles))))
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
+ffmpeg -y -loop 1 -t 19 -framerate 5 -i 'images/title.png' \
+-loop 1 -t 1 -framerate 5 -i 'images/1.png' \
+-loop 1 -t 7 -framerate 5 -i 'images/emacs27-1.png' \
+-loop 1 -t 5 -framerate 5 -i 'images/release-notes.png' \
+-loop 1 -t 3 -framerate 5 -i 'images/emacs-dev-update.png' \
+-loop 1 -t 1 -framerate 5 -i 'images/2.png' \
+-loop 1 -t 12 -framerate 5 -i 'images/gcc-emacs.png' \
+-loop 1 -t 6 -framerate 5 -i 'images/gcc-video.png' \
+-loop 1 -t 1 -framerate 5 -i 'images/3.png' \
+-loop 1 -t 4 -framerate 5 -i 'images/modernization.png' \
+-loop 1 -t 3 -framerate 5 -i 'images/lwn.png' \
+-loop 1 -t 16 -framerate 5 -i 'images/variable-width.png' \
+-loop 1 -t 3 -framerate 5 -i 'images/elegant-emacs.png' \
+-loop 1 -t 1 -framerate 5 -i 'images/4.png' \
+-loop 1 -t 5 -framerate 5 -i 'images/doom-emacs.png' \
+-loop 1 -t 1 -framerate 5 -i 'images/doomcasts.png' \
+-loop 1 -t 6 -framerate 5 -i 'images/distrotube.png' \
+-loop 1 -t 1 -framerate 5 -i 'images/5.png' \
+-loop 1 -t 9 -framerate 5 -i 'images/videos.png' \
+-loop 1 -t 1 -framerate 5 -i 'images/6.png' \
+-loop 1 -t 12 -framerate 5 -i 'images/org-mode.png' \
+-loop 1 -t 5 -framerate 5 -i 'images/org-roam.png' \
+-loop 1 -t 5 -framerate 5 -i 'images/zettelkasten-discussion.png' \
+-loop 1 -t 2 -framerate 5 -i 'images/org-appearance-agenda.png' \
+-loop 1 -t 2 -framerate 5 -i 'images/org-appearance-wysiwyg.png' \
+-loop 1 -t 1 -framerate 5 -i 'images/7.png' \
+-loop 1 -t 5 -framerate 5 -i 'images/json.png' \
+-loop 1 -t 8 -framerate 5 -i 'images/lsp.png' \
+-loop 1 -t 1 -framerate 5 -i 'images/8.png' \
+-loop 1 -t 8 -framerate 5 -i 'images/eaf.png' \
+-loop 1 -t 7 -framerate 5 -i 'images/eaf-talk.png' \
+-loop 1 -t 15 -framerate 5 -i 'images/9.png' \
+-loop 1 -t 7 -framerate 5 -i 'images/meetup-atx.png' \
+-loop 1 -t 5 -framerate 5 -i 'images/meetup-nyc.png' \
+-loop 1 -t 9 -framerate 5 -i 'images/meetup-berlin.png' \
+-loop 1 -t 9 -framerate 5 -i 'images/meetups.png' \
+-loop 1 -t 1 -framerate 5 -i 'images/10.png' \
+-loop 1 -t 12 -framerate 5 -i 'images/survey.png' \
+-loop 1 -t 8 -framerate 5 -i 'images/summary.png' \
+-loop 1 -t 8 -framerate 5 -i 'images/emacs-news.png' \
+-loop 1 -t 4 -framerate 5 -i 'images/emacsconf.png' \
+-loop 1 -t 0 -framerate 5 -i 'images/emacsconf.png' -i audio.ogg -filter_complex "[0:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r0];[1:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r1];[2:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r2];[3:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r3];[4:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r4];[5:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r5];[6:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r6];[7:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r7];[8:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r8];[9:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r9];[10:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r10];[11:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r11];[12:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r12];[13:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r13];[14:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r14];[15:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r15];[16:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r16];[17:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r17];[18:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r18];[19:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r19];[20:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r20];[21:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r21];[22:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r22];[23:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r23];[24:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r24];[25:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r25];[26:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r26];[27:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r27];[28:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r28];[29:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r29];[30:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r30];[31:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r31];[32:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r32];[33:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r33];[34:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r34];[35:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r35];[36:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r36];[37:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r37];[38:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r38];[39:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r39];[40:v]scale=1280:720:force_original_aspect_ratio=decrease,setsar=sar=1,pad=1280:720:(ow-iw)/2:(oh-ih)/2[r40];[r0][r1][r2][r3][r4][r5][r6][r7][r8][r9][r10][r11][r12][r13][r14][r15][r16][r17][r18][r19][r20][r21][r22][r23][r24][r25][r26][r27][r28][r29][r30][r31][r32][r33][r34][r35][r36][r37][r38][r39][r40]concat=n=41:v=1[v]" -map '[v]' -map 42:a -shortest -vsync 1 -c:a copy -c:v vp8 with-audio.webm;ffmpeg -y -i with-audio.webm -i subtitles.srt -c:v copy -c:a copy emacs-conf-2020-emacs-news-highlights-sacha-chua.webm
 #+end_src
 
