@@ -247,7 +247,7 @@
 
 ** Generate the presentation using the timestamps and linked images
 
-#+begin_src emacs-lisp :results value :wrap "src sh" :exports code :var run="copy" :var audio="audio.ogg"
+#+begin_src emacs-lisp :results value :wrap "src sh" :exports both :var run="copy" :var audio="audio.ogg"
   (defun my/include-subtitles ()
     (interactive)
     "ffmpeg -y -i with-audio.webm -i subtitles.srt -c:v copy -c:a copy emacs-conf-2020-emacs-news-highlights-sacha-chua.webm")
