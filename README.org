@@ -58,7 +58,7 @@
 | 0:01:11 | sort out the alignment issues.                             |
 | 0:01:13 | It looks like core Emacs will probably                     |
 | 0:01:15 | change slowly in terms of functionality and documentation, |
-| 0:01:18 | file:images/elegant-emacs.png                              |
+| 0:01:18 | [[file:images/elegant-emacs.png]]                              |
 |         | https://github.com/rougier/elegant-emacs                   |
 | 0:01:18 | but starter kits and configuration give people             |
 | 0:01:21 | a great way to experiment.                                 |
