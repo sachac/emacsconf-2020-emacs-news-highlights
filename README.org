@@ -178,6 +178,29 @@
 | 0:03:59 | [[file:images/emacsconf.png]]                                    |
 | 0:03:49 | Have fun, and thanks for joining us!                         |
 
+* Additional notes from the pad
+
+** Questions
+
+*** Any news about guile-on-emacs? Is it a dead project?
+
+ -  Haven't been linking to things about it lately. Last major news was https://emacsninja.com/posts/state-of-emacs-lisp-on-guile.html (May), I think
+
+ -  The only contributor to it occasionally shows up on #emacs, they revealed they've been busy programming for a living to improve browser JS engines and would need funding to do further Guile Emacs work (like, 10$ monthly from a few dozen people on Patreon or so)
+
+*** Is there some kind of online summary page of Emacs community meetups and events?
+
+ -  Not yet, although https://www.emacswiki.org/emacs/Usergroups is a start
+
+** Notes
+
+ - Additional meetup (French): https://www.emacs-doctor.com/emacs-paris-user-group/
+ -  Please make your big blue button full screen. +1
+ -  Super happy with emacs!
+ -  🤞 maybe next time we'll be taking notes with crdt.el (https://code.librehq.com/qhong/crdt.el) +1
+ -  super solid video, loved the baked captions +1+1
+ -  https://github.com/sachac/emacsconf-2020-emacs-news-highlights <- The talk
+ 
 * Code
 ** Generate subtitles
 
