@@ -260,7 +260,8 @@
                                      (1+ i)
                                      (plist-get (elt temp i) :start-ts)
                                      (plist-get (elt temp i) :end-ts)
-                                     (plist-get (elt temp i) :text)))))
+                                     (plist-get (elt temp i) :text))))
+               "\n")
               (save-buffer)))))
   (my/generate-subtitles (my/get-timestamp-lines))
 #+end_src
